@@ -1,4 +1,4 @@
-
+```html
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -19,7 +19,7 @@ font-family:'Poppins',sans-serif;
 }
 
 body{
-background:linear-gradient(135deg,#020617,#0f172a,#1e293b);
+background:linear-gradient(135deg,#141e30,#243b55);
 color:white;
 line-height:1.6;
 }
@@ -30,25 +30,22 @@ header{
 display:flex;
 justify-content:space-between;
 align-items:center;
-padding:25px 8%;
-background:linear-gradient(90deg,#020617,#0f172a);
-border-bottom:1px solid rgba(255,255,255,0.08);
+padding:18px 6%;
+background:rgba(0,0,0,0.4);
+backdrop-filter:blur(10px);
 }
 
 .logo{
-font-size:26px;
+font-size:22px;
 font-weight:700;
-background:linear-gradient(90deg,#38bdf8,#22c55e);
--webkit-background-clip:text;
-color:transparent;
+color:#38bdf8;
 }
 
 nav a{
 color:white;
 text-decoration:none;
-margin-left:25px;
-font-size:16px;
-transition:0.3s;
+margin-left:20px;
+font-size:15px;
 }
 
 nav a:hover{
@@ -58,85 +55,68 @@ color:#38bdf8;
 /* HERO */
 
 .hero{
-height:90vh;
+min-height:80vh;
 display:flex;
 flex-direction:column;
 justify-content:center;
 align-items:center;
 text-align:center;
-padding:0 10%;
-background:radial-gradient(circle at center,#0f172a,#020617);
+padding:40px 8%;
 }
 
 .hero h1{
-font-size:56px;
+font-size:42px;
 margin-bottom:15px;
-background:linear-gradient(90deg,#38bdf8,#22c55e);
--webkit-background-clip:text;
-color:transparent;
 }
 
 .hero p{
-font-size:18px;
+font-size:16px;
 color:#cbd5f5;
-max-width:650px;
+max-width:550px;
 }
-
-/* BUTTON */
 
 .hero button{
 margin-top:25px;
-padding:14px 35px;
+padding:12px 28px;
 border:none;
-background:linear-gradient(90deg,#38bdf8,#22c55e);
+background:#38bdf8;
 color:black;
 font-weight:600;
-border-radius:8px;
+border-radius:6px;
 cursor:pointer;
-transition:0.3s;
 }
 
-.hero button:hover{
-transform:scale(1.05);
-box-shadow:0 0 20px rgba(56,189,248,0.5);
-}
-
-/* SECTIONS */
+/* SECTION */
 
 .section{
-padding:80px 8%;
+padding:70px 8%;
 text-align:center;
 }
 
 .section h2{
-font-size:36px;
-margin-bottom:40px;
-background:linear-gradient(90deg,#38bdf8,#22c55e);
--webkit-background-clip:text;
-color:transparent;
+font-size:30px;
+margin-bottom:35px;
 }
 
 /* GRID */
 
 .grid{
 display:grid;
-grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
-gap:25px;
+grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+gap:20px;
 }
 
-/* CARDS */
+/* CARD */
 
 .card{
-background:linear-gradient(145deg,#0f172a,#1e293b);
-border-radius:12px;
+background:#1e293b;
+border-radius:10px;
 overflow:hidden;
 transition:0.3s;
-border:1px solid rgba(255,255,255,0.05);
 }
 
 .card:hover{
-transform:translateY(-8px) scale(1.03);
-box-shadow:0 10px 30px rgba(0,0,0,0.6);
+transform:scale(1.04);
 }
 
 .card img{
@@ -146,28 +126,20 @@ display:block;
 
 .card video{
 width:100%;
-display:block;
 }
 
 /* SERVICES */
 
 .services{
 display:grid;
-grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
-gap:25px;
+grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+gap:20px;
 }
 
 .service{
-background:linear-gradient(145deg,#0f172a,#1e293b);
-padding:30px;
-border-radius:12px;
-border:1px solid rgba(255,255,255,0.05);
-transition:0.3s;
-}
-
-.service:hover{
-transform:translateY(-6px);
-box-shadow:0 8px 25px rgba(0,0,0,0.5);
+background:#1e293b;
+padding:25px;
+border-radius:10px;
 }
 
 .service h3{
@@ -178,36 +150,52 @@ color:#38bdf8;
 /* CONTACT */
 
 .contact{
-background:linear-gradient(90deg,#020617,#0f172a);
-padding:70px 8%;
+background:#020617;
+padding:60px 8%;
 text-align:center;
 }
 
 .contact a{
 display:inline-block;
 margin-top:20px;
-padding:12px 28px;
-background:linear-gradient(90deg,#38bdf8,#22c55e);
+padding:12px 25px;
+background:#38bdf8;
 color:black;
 text-decoration:none;
-border-radius:8px;
+border-radius:6px;
 font-weight:600;
-transition:0.3s;
-}
-
-.contact a:hover{
-transform:scale(1.05);
-box-shadow:0 0 20px rgba(56,189,248,0.5);
 }
 
 /* FOOTER */
 
 footer{
 text-align:center;
-padding:25px;
+padding:20px;
 background:#020617;
-margin-top:30px;
+margin-top:20px;
 color:#94a3b8;
+}
+
+/* MOBILE */
+
+@media(max-width:768px){
+
+.hero h1{
+font-size:30px;
+}
+
+.hero p{
+font-size:14px;
+}
+
+nav{
+display:none;
+}
+
+header{
+justify-content:center;
+}
+
 }
 
 </style>
@@ -231,10 +219,10 @@ color:#94a3b8;
 
 <section class="hero">
 
-<h1>VIEWS GOT FREEZED?</h1>
+<h1>Views Got Frozen?</h1>
 
 <p>
-Welcome! Explore my latest thumbnail designs and video edits crafted to boost clicks, views, and engagement for creators and brands.
+Welcome! Explore my latest thumbnail designs and video edits crafted for creators and brands to increase engagement and clicks.
 </p>
 
 <button onclick="scrollToWork()">View Portfolio</button>
@@ -297,17 +285,17 @@ Welcome! Explore my latest thumbnail designs and video edits crafted to boost cl
 
 <div class="service">
 <h3>YouTube Thumbnail Design</h3>
-<p>High CTR thumbnails designed to increase clicks and boost YouTube growth.</p>
+<p>High CTR thumbnails designed to boost video clicks.</p>
 </div>
 
 <div class="service">
 <h3>Video Editing</h3>
-<p>Professional editing for YouTube videos, reels, shorts and ads.</p>
+<p>Professional edits for YouTube, reels and ads.</p>
 </div>
 
 <div class="service">
 <h3>Social Media Graphics</h3>
-<p>Instagram posts, banners, posters and promotional graphics.</p>
+<p>Instagram posts, banners and promotional graphics.</p>
 </div>
 
 </div>
