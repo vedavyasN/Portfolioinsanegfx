@@ -1,4 +1,5 @@
 <!DOCTYPE html>
+
 <html lang="en">
 <head>
 <meta charset="UTF-8">
@@ -21,37 +22,6 @@ scroll-behavior:smooth;
 body{
 color:white;
 background:#070b12;
-overflow-x:hidden;
-position:relative;
-}
-
-/* BLUE GLOW BACKGROUND */
-
-body::before{
-content:"";
-position:fixed;
-width:100%;
-height:100%;
-top:0;
-left:0;
-background:
-radial-gradient(circle at bottom,#0d3a6a 0%,transparent 60%),
-radial-gradient(circle at top right,#0c1e36 0%,transparent 50%);
-z-index:-2;
-}
-
-/* GRAIN TEXTURE */
-
-body::after{
-content:"";
-position:fixed;
-width:100%;
-height:100%;
-top:0;
-left:0;
-background-image:url("https://grainy-gradients.vercel.app/noise.svg");
-opacity:0.12;
-z-index:-1;
 }
 
 /* HEADER */
@@ -63,16 +33,13 @@ align-items:center;
 padding:20px 8%;
 background:rgba(255,255,255,0.03);
 backdrop-filter:blur(10px);
-border-bottom:1px solid rgba(255,255,255,0.05);
 position:sticky;
 top:0;
-z-index:1000;
 }
 
 .logo{
 font-size:24px;
 font-weight:700;
-letter-spacing:1px;
 }
 
 nav{
@@ -83,323 +50,221 @@ gap:25px;
 nav a{
 color:white;
 text-decoration:none;
-font-size:16px;
-opacity:.75;
-transition:.3s;
+opacity:.7;
 }
 
 nav a:hover{
-opacity:1;
 color:#4aa3ff;
-}
-
-.menu{
-display:none;
-font-size:28px;
-cursor:pointer;
 }
 
 /* HERO */
 
 .hero{
-min-height:85vh;
+min-height:80vh;
 display:flex;
 flex-direction:column;
 justify-content:center;
 align-items:center;
 text-align:center;
-padding:40px 10%;
 }
 
 .hero h1{
-font-size:56px;
-margin-bottom:15px;
-font-weight:700;
-}
-
-.hero p{
-max-width:600px;
-opacity:.75;
+font-size:50px;
 }
 
 .hero button{
-margin-top:25px;
-padding:14px 34px;
-border:none;
+margin-top:20px;
+padding:12px 30px;
 border-radius:30px;
-background:white;
-color:black;
-font-weight:600;
+border:none;
 cursor:pointer;
-transition:.3s;
-}
-
-.hero button:hover{
-transform:scale(1.07);
 }
 
 /* SECTION */
 
 .section{
-padding:90px 8%;
+padding:100px 8%;
 text-align:center;
 }
 
 .section h2{
-font-size:36px;
-margin-bottom:50px;
+margin-bottom:40px;
 }
 
 /* GRID */
 
 .grid{
 display:grid;
-grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
 gap:30px;
-}
-
-/* CARD */
-
-.card{
-background:rgba(255,255,255,0.03);
-border-radius:16px;
-overflow:hidden;
-transition:.4s;
-border:1px solid rgba(255,255,255,0.05);
-}
-
-.card:hover{
-transform:translateY(-8px);
-box-shadow:0 10px 40px rgba(0,0,0,.6);
+max-width:1100px;
+margin:0 auto;
 }
 
 .card img{
 width:100%;
-display:block;
-}
-
-.card video{
-width:100%;
-}
-
-/* SERVICES */
-
-.services{
-display:grid;
-grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
-gap:30px;
-}
-
-.service{
-background:rgba(255,255,255,0.03);
-padding:35px;
-border-radius:16px;
-border:1px solid rgba(255,255,255,0.05);
+border-radius:12px;
+cursor:pointer;
 transition:.3s;
 }
 
-.service:hover{
-transform:translateY(-8px);
-box-shadow:0 0 25px rgba(74,163,255,0.4);
+.card img:hover{
+transform:scale(1.05);
 }
 
-.service h3{
-margin-bottom:12px;
-color:#4aa3ff;
+#work{
+margin-bottom:80px;
 }
 
-/* CONTACT CTA */
+/* POPUP */
+
+.popup{
+position:fixed;
+top:0;
+left:0;
+width:100%;
+height:100%;
+background:#000;
+display:none;
+justify-content:center;
+align-items:center;
+z-index:9999;
+}
+
+.popup img{
+max-width:90%;
+max-height:80%;
+}
+
+.back{
+position:absolute;
+top:20px;
+left:20px;
+font-size:30px;
+cursor:pointer;
+}
+
+/* CONTACT */
 
 .contact{
-padding:120px 8%;
+display:flex;
+flex-direction:column;
+align-items:center;
+justify-content:center;
+padding:80px 20px 30px;
 text-align:center;
-position:relative;
 }
 
 .contact h2{
-font-size:50px;
-margin-bottom:20px;
+font-size:36px;
+margin-bottom:10px;
 }
 
 .contact p{
-opacity:.75;
+opacity:.7;
+margin-bottom:20px;
 }
 
 .contact a{
-display:inline-block;
-margin-top:25px;
-padding:14px 36px;
-border-radius:30px;
+padding:12px 30px;
 background:white;
 color:black;
+border-radius:30px;
 text-decoration:none;
-font-weight:600;
+font-weight:500;
 transition:.3s;
 }
 
 .contact a:hover{
-transform:scale(1.07);
+transform:scale(1.05);
+}
+
+/* SVG ICONS */
+
+.socials{
+display:flex;
+justify-content:center;
+gap:30px;
+margin:30px 0 10px;
+}
+
+.socials a{
+display:flex;
+align-items:center;
+justify-content:center;
+}
+
+.socials svg{
+width:42px;
+height:42px;
+stroke:white;
+fill:none;
+stroke-width:2;
+transition:.3s;
+}
+
+.socials svg:hover{
+transform:scale(1.2);
+stroke:#4aa3ff;
 }
 
 /* FOOTER */
 
 footer{
 text-align:center;
-padding:40px;
+padding:15px;
 opacity:.6;
-border-top:1px solid rgba(255,255,255,0.05);
-}
-
-/* MOBILE */
-
-@media(max-width:768px){
-
-nav{
-display:none;
-flex-direction:column;
-background:#0a0f18;
-position:absolute;
-top:70px;
-right:0;
-width:200px;
-padding:20px;
-border-radius:10px;
-}
-
-nav.show{
-display:flex;
-}
-
-.menu{
-display:block;
-}
-
-.hero h1{
-font-size:38px;
-}
-
-.hero p{
-font-size:14px;
-}
-
-.contact h2{
-font-size:36px;
-}
-
 }
 
 </style>
+
 </head>
 
 <body>
 
 <header>
-
 <div class="logo">Insane gfx</div>
-
-<div class="menu" onclick="toggleMenu()">☰</div>
-
-<nav id="nav">
-
+<nav>
 <a href="#work">Work</a>
-<a href="#videos">Videos</a>
-<a href="#services">Services</a>
 <a href="#contact">Contact</a>
-
 </nav>
-
 </header>
 
 <section class="hero">
-
 <h1>Views Got Frozen?</h1>
-
-<p>
-Explore high CTR thumbnails and cinematic video edits crafted to grow your content.
-</p>
-
 <button onclick="scrollToWork()">View Portfolio</button>
-
 </section>
 
 <section class="section" id="work">
-
-<h2>Recent Thumbnail Designs</h2>
-
-<div class="grid">
-
-<div class="card">
-<img src="img1.jpg">
-</div>
-
-<div class="card">
-<img src="img2.jpg">
-</div>
-
-<div class="card">
-<img src="img3.jpg">
-</div>
-
-<div class="card">
-<img src="img4.jpg">
-</div>
-
-</div>
-
-</section>
-
-<section class="section" id="videos">
-
-<h2>Video Editing Portfolio</h2>
+<h2>Thumbnails</h2>
 
 <div class="grid">
 
 <div class="card">
-<video controls>
-<source src="vid1.mp4" type="video/mp4">
-</video>
+<img src="img1.jpg" onclick="openImage(this.src)">
 </div>
 
 <div class="card">
-<video controls>
-<source src="vid2.mp4" type="video/mp4">
-</video>
+<img src="img2.jpg" onclick="openImage(this.src)">
+</div>
+
+<div class="card">
+<img src="img3.jpg" onclick="openImage(this.src)">
+</div>
+
+<div class="card">
+<img src="img4.jpg" onclick="openImage(this.src)">
 </div>
 
 </div>
-
 </section>
 
-<section class="section" id="services">
-
-<h2>Services</h2>
-
-<div class="services">
-
-<div class="service">
-<h3>YouTube Thumbnail Design</h3>
-<p>High CTR thumbnails designed to increase clicks.</p>
-</div>
-
-<div class="service">
-<h3>Video Editing</h3>
-<p>Professional edits for YouTube videos, reels and ads.</p>
-</div>
-
-<div class="service">
-<h3>Social Media Graphics</h3>
-<p>Instagram posts, banners and promotional graphics.</p>
-</div>
-
-</div>
-
-</section>
+<!-- CONTACT -->
 
 <section class="contact" id="contact">
 
-<h2>Anything in mind?<br>Let's talk</h2>
-
-<p>DM me on Instagram for collaborations and projects.</p>
+<h2>Anything in mind?</h2>
+<p>Let's talk</p>
 
 <a href="https://instagram.com/insanegfx" target="_blank">
 Let's Talk
@@ -407,11 +272,41 @@ Let's Talk
 
 </section>
 
+<!-- SVG ICONS -->
+
+<div class="socials">
+
+<!-- Instagram SVG -->
+
+<a href="https://instagram.com/insanegfx" target="_blank">
+<svg viewBox="0 0 24 24">
+<rect x="3" y="3" width="18" height="18" rx="5"/>
+<circle cx="12" cy="12" r="4"/>
+<circle cx="17.5" cy="6.5" r="1"/>
+</svg>
+</a>
+
+<!-- Gmail SVG -->
+
+<a href="mailto:insaneeditzgfx@gmail.com">
+<svg viewBox="0 0 24 24">
+<rect x="2" y="4" width="20" height="16" rx="2"/>
+<path d="M2 6l10 7 10-7"/>
+</svg>
+</a>
+
+</div>
+
 <footer>
-
-<p>© 2026 INSANE GFX</p>
-
+© 2026 INSANE GFX
 </footer>
+
+<!-- POPUP -->
+
+<div class="popup" id="popup">
+<span class="back" onclick="closePopup()">←</span>
+<img id="popupImg">
+</div>
 
 <script>
 
@@ -419,8 +314,13 @@ function scrollToWork(){
 document.getElementById("work").scrollIntoView({behavior:"smooth"});
 }
 
-function toggleMenu(){
-document.getElementById("nav").classList.toggle("show");
+function openImage(src){
+document.getElementById("popup").style.display="flex";
+document.getElementById("popupImg").src=src;
+}
+
+function closePopup(){
+document.getElementById("popup").style.display="none";
 }
 
 </script>
